@@ -1,0 +1,12 @@
+<div *ngIf="dataLoaded == false" class="spinner-border text-blue" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+<table *ngIf="dataLoaded == true" class="table">
+  <thead>
+    <th>Brands</th>
+  </thead>
+  <ul *ngFor="let brand of brands" class="list-group">
+      <li class="list-group-item">{{ brand.name }}</li>
+  </ul>
+</table>
